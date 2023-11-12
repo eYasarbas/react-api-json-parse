@@ -6,23 +6,27 @@ import { Button } from '@mui/material';
 import { Container } from 'react-bootstrap';
 
 const Navbar = () => {
-
-  const [Variant, setVariant] = useState("contained");
-  const handleClick = () => {
-    if (Variant === "contained") {
-      setVariant("text");
-    } else {
-      setVariant("contained");
-    }
-  };
+  const [isPressed, setIsPressed] = useState(false);
 
   return (
     <Container>
       <div style={{ padding: 5 }} className="d-flex">
         <div style={{ marginRight: 10 }}>
-          <Button variant={Variant} onClick={handleClick}>Home</Button>
+          <Button
+            variant={isPressed ? "contained" : "text"}
+            href="/home"
+            onClick={() => setIsPressed(!isPressed)}
+          >
+            Home
+          </Button>
         </div>
-        <Button variant={setVariant} onClick={handleClick}>About</Button>
+        <Button
+          variant={isPressed ? "text" : "contained"}
+          href="/about"
+          onClick={() => setIsPressed(!isPressed)}
+          >
+          About
+          </Button>
       </div>
     </Container>
   );
