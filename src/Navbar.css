@@ -1,0 +1,29 @@
+.navbar {
+    background-color: #3498db; /* Navbar arkaplan rengi */
+    padding: 10px;
+  }
+  
+  .navbar-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-item {
+    margin: 0;
+  }
+  
+  .navbar-link {
+    text-decoration: none;
+    color: #ecf0f1; /* Link rengi */
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar-link:hover {
+    color: #e74c3c; /* Hover rengi */
+  }
+  
